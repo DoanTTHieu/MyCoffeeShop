@@ -17,12 +17,6 @@ export default class Auth extends Component {
         };
     }
 
-    SignIn() {
-        this.setState({ isSignIn: true });
-    }
-    SignUp() {
-        this.setState({ isSignIn: false });
-    }
     render() {
         const { row1, iconStyle, titleStyle, container, btnSignIn,
             btnSignUp, inactiveStyle, activeStyle, controlStyle, keyboardContainer,
@@ -139,10 +133,10 @@ export default class Auth extends Component {
                     </View>
 
                     <View style={controlStyle}>
-                    <TouchableOpacity style={btnSignIn} onPress={this.SignIn.bind(this)}>
+                        <TouchableOpacity style={btnSignIn}>
                             <Text style={isSignIn ? activeStyle : inactiveStyle}>SIGN IN</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={btnSignUp} onPress={this.SignUp.bind(this)}>
+                        <TouchableOpacity style={btnSignUp}>
                             <Text style={!isSignIn ? activeStyle : inactiveStyle}>SIGN UP</Text>
                         </TouchableOpacity>
                     </View>
